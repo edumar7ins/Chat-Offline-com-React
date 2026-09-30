@@ -79,16 +79,16 @@ O projeto já está configurado com Vite, React, TypeScript e Tailwind CSS. A im
 
 - [x] A página inicial exibe a interface do chat, não o conteúdo padrão do Vite.
 - [ ] O estado inicial apresenta conversa vazia e modo Usuário selecionado.
-- [ ] É possível enviar uma mensagem como Usuário e vê-la alinhada à direita.
-- [ ] É possível alternar para Robô, observar a borda roxa no card e enviar uma mensagem alinhada à esquerda.
-- [ ] As mensagens permanecem em ordem e o histórico rola até a mais recente.
-- [ ] O botão permanece desabilitado para conteúdo vazio ou composto apenas por espaços.
-- [ ] `Enter` envia e `Shift+Enter` insere nova linha.
-- [ ] O campo limpa após envio e mensagens antigas mantêm conteúdo e remetente.
-- [ ] Recarregar a página remove o histórico.
+- [x] É possível enviar uma mensagem como Usuário e vê-la alinhada à direita.
+- [x] É possível alternar para Robô, observar a borda roxa no card e enviar uma mensagem alinhada à esquerda.
+- [x] As mensagens permanecem em ordem e o histórico rola até a mais recente.
+- [x] O botão permanece desabilitado para conteúdo vazio ou composto apenas por espaços.
+- [x] `Enter` envia e `Shift+Enter` insere nova linha.
+- [x] O campo limpa após envio e mensagens antigas mantêm conteúdo e remetente.
+- [x] Recarregar a página remove o histórico.
 - [x] O layout funciona em viewport móvel e desktop, sem sobreposição ou rolagem horizontal.
-- [ ] Os controles principais podem ser usados por teclado e têm nomes/estados acessíveis.
-- [ ] `npm run build` e `npm run lint` concluem sem erros.
+- [x] Os controles principais podem ser usados por teclado e têm nomes/estados acessíveis.
+- [x] `npm run build` e `npm run lint` concluem sem erros.
 
 ## 8. Plano de implementação
 
@@ -118,7 +118,7 @@ As tarefas estão ordenadas para que cada etapa deixe uma base funcional para a 
 
 **Pronto quando:** a estrutura mantém dimensões e rolagem corretas nas larguras móvel e desktop.
 
-### Etapa 4: Implementar o histórico
+### Etapa 4: Implementar o histórico [x]
 
 - Criar o componente de histórico e o componente de mensagem em `src/components`.
 - Renderizar conteúdo preservando quebras de linha, remetente e alinhamento correspondente.
@@ -126,7 +126,7 @@ As tarefas estão ordenadas para que cada etapa deixe uma base funcional para a 
 
 **Pronto quando:** mensagens inseridas no estado aparecem na ordem correta, alinhadas conforme o remetente.
 
-### Etapa 5: Implementar a composição e o toggle
+### Etapa 5: Implementar a composição e o toggle [x]
 
 - Criar o card de composição com campo de altura ajustável, toggle Usuário/Robô e botão de envio.
 - Implementar envio por botão e por `Enter`, preservando `Shift+Enter` para quebra de linha.
@@ -135,7 +135,7 @@ As tarefas estão ordenadas para que cada etapa deixe uma base funcional para a 
 
 **Pronto quando:** todos os critérios de composição, validação e seleção de remetente são atendidos.
 
-### Etapa 6: Revisar acessibilidade e estados de interface
+### Etapa 6: Revisar acessibilidade e estados de interface [x]
 
 - Verificar nomes acessíveis, foco visível, operação por teclado e semântica dos controles.
 - Verificar campo vazio, botão desabilitado, troca de remetente, mensagens multilinha e histórico longo.
@@ -143,7 +143,7 @@ As tarefas estão ordenadas para que cada etapa deixe uma base funcional para a 
 
 **Pronto quando:** os controles e estados são compreensíveis sem depender exclusivamente de cor ou mouse.
 
-### Etapa 7: Validar a implementação
+### Etapa 7: Validar a implementação [x]
 
 - Executar `npm run build` e `npm run lint`.
 - Fazer uma verificação manual dos fluxos de envio, troca de remetente, rolagem e responsividade.
