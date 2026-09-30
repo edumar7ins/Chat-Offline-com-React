@@ -21,15 +21,27 @@ export default function ChatHistory({ messages }: ChatHistoryProps) {
     <div
       ref={historyRef}
       aria-label={`Histórico de mensagens (${messages.length})`}
-      className="min-h-0 flex-1 overflow-y-auto px-4"
+      className="chat-history"
       role="log"
     >
+      <div aria-hidden="true" className="history-caption">
+        <span>Histórico</span>
+        <span className="history-count">
+          {String(messages.length).padStart(2, '0')} {messages.length === 1 ? 'mensagem' : 'mensagens'}
+        </span>
+      </div>
       {messages.length === 0 ? (
-        <p className="flex h-full items-center justify-center text-sm text-stone-600">
-          Nenhuma mensagem ainda
-        </p>
+        <div className="empty-state">
+          <span aria-hidden="true" className="empty-mark">
+            <span />
+            <span />
+            <span />
+          </span>
+          <p className="empty-title">Tudo começa por aqui.</p>
+          <p className="empty-note">Ainda não há mensagens nesta conversa.</p>
+        </div>
       ) : (
-        <div className="flex flex-col gap-3 py-4">
+        <div className="message-list">
           {messages.map((message) => (
             <MessageItem key={message.id} message={message} />
           ))}

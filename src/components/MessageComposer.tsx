@@ -48,8 +48,8 @@ export default function MessageComposer({
   return (
     <form
       aria-label={`Composição de mensagem como ${isBot ? 'Robô' : 'Usuário'}`}
-      className={`flex items-end gap-2 rounded-xl border bg-white p-3 shadow-sm sm:gap-3 ${
-        isBot ? 'border-purple-500' : 'border-stone-200'
+      className={`message-composer ${
+        isBot ? 'message-composer--bot' : ''
       }`}
       onSubmit={sendMessage}
     >
@@ -58,15 +58,18 @@ export default function MessageComposer({
         role="switch"
         aria-checked={isBot}
         aria-label="Alternar remetente entre Usuário e Robô"
-        className="shrink-0 rounded-lg border border-stone-300 px-2 py-2 text-xs font-semibold text-stone-700 outline-none hover:bg-stone-100 focus-visible:ring-2 focus-visible:ring-purple-500 sm:px-3 sm:text-sm"
+        className={`sender-toggle ${isBot ? 'sender-toggle--bot' : ''}`}
         onClick={() => onSenderChange(isBot ? 'user' : 'bot')}
       >
-        {isBot ? 'Robô' : 'Usuário'}
+        <span aria-hidden="true" className="sender-toggle__mark">
+          {isBot ? 'R' : 'U'}
+        </span>
+        <span>{isBot ? 'Robô' : 'Usuário'}</span>
       </button>
       <textarea
         ref={textareaRef}
         aria-label="Mensagem"
-        className="max-h-40 min-w-0 flex-1 resize-none overflow-y-auto bg-transparent py-2 text-sm leading-5 text-stone-900 outline-none placeholder:text-stone-500 focus-visible:ring-2 focus-visible:ring-purple-500"
+        className="message-input"
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         placeholder="Digite uma mensagem..."
@@ -76,9 +79,10 @@ export default function MessageComposer({
       <button
         type="submit"
         disabled={!content.trim()}
-        className="shrink-0 rounded-lg bg-stone-900 px-3 py-2 text-sm font-semibold text-white outline-none hover:bg-stone-700 focus-visible:ring-2 focus-visible:ring-purple-500 disabled:cursor-not-allowed disabled:bg-stone-300 disabled:text-stone-500 sm:px-4"
+        className="send-button"
       >
-        Enviar
+        <span>Enviar</span>
+        <span aria-hidden="true" className="send-arrow">↗</span>
       </button>
     </form>
   )

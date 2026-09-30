@@ -56,9 +56,11 @@ O projeto já está configurado com Vite, React, TypeScript e Tailwind CSS. A im
 
 ## 5. Requisitos visuais e responsivos
 
-- Fundo geral em tom marrom claro/âmbar.
+- Fundo geral claro em tom verde-neblina, com textura de grade discreta.
 - O conteúdo do chat, incluindo histórico e composição, usa largura máxima equivalente a `2XL` e fica centralizado em telas maiores.
 - A composição fica ancorada na parte inferior da janela; o histórico ocupa o espaço restante e rola independentemente quando necessário.
+- O cabeçalho identifica a conversa e indica seu estado local/privado.
+- As mensagens de Usuário e Robô usam superfícies e marcadores próprios, além do alinhamento.
 - O card de composição tem fundo branco e altura que acompanha o texto.
 - O botão de envio fica no lado direito do card; o toggle de remetente fica no lado esquerdo.
 - No modo Robô, a borda roxa do card comunica claramente o modo ativo.
