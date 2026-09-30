@@ -86,7 +86,7 @@ O projeto já está configurado com Vite, React, TypeScript e Tailwind CSS. A im
 - [ ] `Enter` envia e `Shift+Enter` insere nova linha.
 - [ ] O campo limpa após envio e mensagens antigas mantêm conteúdo e remetente.
 - [ ] Recarregar a página remove o histórico.
-- [ ] O layout funciona em viewport móvel e desktop, sem sobreposição ou rolagem horizontal.
+- [x] O layout funciona em viewport móvel e desktop, sem sobreposição ou rolagem horizontal.
 - [ ] Os controles principais podem ser usados por teclado e têm nomes/estados acessíveis.
 - [ ] `npm run build` e `npm run lint` concluem sem erros.
 
@@ -102,7 +102,7 @@ As tarefas estão ordenadas para que cada etapa deixe uma base funcional para a 
 
 **Pronto quando:** a página renderiza a estrutura vazia do chat sem conteúdo ou assets de demonstração do Vite.
 
-### Etapa 2: Definir o modelo de mensagem
+### Etapa 2: Definir o modelo de mensagem [x]
 
 - Criar em `src/types` o tipo da mensagem e o tipo/união para os remetentes `user` e `bot`.
 - Implementar no componente principal o estado em memória para mensagens e remetente selecionado.
@@ -110,7 +110,7 @@ As tarefas estão ordenadas para que cada etapa deixe uma base funcional para a 
 
 **Pronto quando:** o estado representa uma conversa vazia e permite armazenar conteúdo e remetente sem persistência.
 
-### Etapa 3: Construir o layout responsivo
+### Etapa 3: Construir o layout responsivo [x]
 
 - Criar a estrutura visual com fundo âmbar, coluna centralizada até `2XL`, histórico rolável e área de composição ancorada embaixo.
 - Aplicar regras responsivas para celular e desktop.
