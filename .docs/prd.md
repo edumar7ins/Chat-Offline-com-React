@@ -77,7 +77,7 @@ O projeto já está configurado com Vite, React, TypeScript e Tailwind CSS. A im
 
 ## 7. Critérios de aceite
 
-- [ ] A página inicial exibe a interface do chat, não o conteúdo padrão do Vite.
+- [x] A página inicial exibe a interface do chat, não o conteúdo padrão do Vite.
 - [ ] O estado inicial apresenta conversa vazia e modo Usuário selecionado.
 - [ ] É possível enviar uma mensagem como Usuário e vê-la alinhada à direita.
 - [ ] É possível alternar para Robô, observar a borda roxa no card e enviar uma mensagem alinhada à esquerda.
@@ -94,7 +94,7 @@ O projeto já está configurado com Vite, React, TypeScript e Tailwind CSS. A im
 
 As tarefas estão ordenadas para que cada etapa deixe uma base funcional para a seguinte.
 
-### Etapa 1: Remover a tela inicial do Vite
+### Etapa 1: Remover a tela inicial do Vite [x]
 
 - Substituir o conteúdo de demonstração em `src/App.tsx` pela estrutura principal do chat.
 - Remover estilos de demonstração que deixarem de ser usados em `src/App.css` e ajustar estilos globais somente onde necessário.
